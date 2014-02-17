@@ -1,0 +1,30 @@
+{
+  "name": "pseudo-promise",
+  "description": "A custom promise implementation for Node",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chill117/pseudo-promise"
+  },
+  "author": {
+    "name": "Charles Hill",
+    "email": "chill@degreesofzero.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "underscore": "1.6.0"
+  },
+  "devDependencies": {
+    "mocha": "1.17.0",
+    "chai": "1.9.0"
+  },
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/chill117/pseudo-promise/issues"
+  }
+}
