@@ -497,4 +497,34 @@ describe('Promise', function() {
 
 	})
 
+	describe('#Chaining', function() {
+
+		it('should be able to chain listener methods', function() {
+
+			var promise = new Promise()
+
+			promise
+				.error(errorCallback)
+				.success(successCallback)
+
+			var error_listeners = promise.listeners('error')
+			var success_listeners = promise.listeners('success')
+
+			expect(error_listeners).to.have.length(1)
+			expect(success_listeners).to.have.length(1)
+			expect(error_listeners[0].toString()).to.equal(errorCallback.toString())
+			expect(success_listeners[0].toString()).to.equal(successCallback.toString())
+
+			function errorCallback(error) {
+
+			}
+
+			function successCallback(result) {
+
+			}
+
+		})
+
+	})
+
 })
