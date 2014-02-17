@@ -1,7 +1,7 @@
 {
   "name": "pseudo-promise",
   "description": "A custom promise implementation for Node",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {},
   "repository": {
