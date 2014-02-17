@@ -29,6 +29,8 @@ npm install
 
 Given an asynchronous function:
 ```
+var Promise = require('pseudo-promise')
+
 function asynchronousFunction() {
 
 	var promise = new Promise()
