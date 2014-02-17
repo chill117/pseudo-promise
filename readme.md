@@ -27,8 +27,76 @@ npm install
 
 ## Usage
 
-For detailed usage information, please see the tests.
+Given an asynchronous function:
+```
+function asynchronousFunction() {
 
+	var promise = new Promise()
+
+	setTimeout(function() {
+
+		// Uncomment the following line to simulate an error:
+		// prommise.reject('An error occurred!')
+
+		promise.resolve({name: 'A result!'})
+
+	}, 500)
+
+	return promise
+	
+}
+```
+
+Listen for either an error or a result:
+```
+asynchronousFunction().complete(function(error, result) {
+
+	if (error)
+		return console.log(error)
+
+	// Do stuff with the result.
+	console.log('result:')
+	console.log(result)
+
+})
+```
+
+Or, listen for the result only:
+```
+asynchronousFunction().success(function(result) {
+
+	// Do stuff with the result.
+	console.log('result:')
+	console.log(result)
+
+})
+```
+
+Or, listen for the error only:
+```
+asynchronousFunction().error(function(error) {
+
+	console.log(error)
+
+})
+```
+
+Chaining works too:
+```
+asynchronousFunction()
+	.error(function(error) {
+
+		console.log(error)
+
+	})
+	.success(function(result) {
+
+		// Do stuff with the result.
+		console.log('result:')
+		console.log(result)
+
+	})
+```
 
 
 ## How to Run Tests
