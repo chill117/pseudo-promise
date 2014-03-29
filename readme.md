@@ -1,4 +1,4 @@
-# pseudo-promise
+# pseudo-promise [![Build Status](https://travis-ci.org/chill117/pseudo-promise.svg)](https://travis-ci.org/chill117/pseudo-promise)
 
 A custom promise implementation for Node
 
